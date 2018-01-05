@@ -1,6 +1,7 @@
 import requests
 import json
 
+
 class Sinter(object):
 	"""
 	Class for interacting with the Sinter API

@@ -1,1 +1,1 @@
-from pysinter import *
+from pysinter.pysinter import *

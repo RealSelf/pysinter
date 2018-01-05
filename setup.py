@@ -8,7 +8,7 @@ setup(
 	author="Michael Dunn",
 	author_email="michael.dunn@realself.com",
 	license="MIT",
-	install_requires=['requests', 'json'],
+	install_requires=['requests'],
 	packages=['pysinter'],
 	keywords=['sinter', 'business intelligence', 'bi', 'etl', 'dbt']
 	)

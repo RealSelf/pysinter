@@ -11,8 +11,8 @@ class Sinter(object):
 	* :py:meth:`list_job_definitions` - lists all job definitions for the specified project id
 	* :py:meth:`get_job_definition` - (not implemented) returns details of a single job definition
 	* :py:meth:`list_job_runs` - (not implemented) lists all job runs for the specified job id
-	* :py:meth:`get_job_run` - (not implemented) returns details of a single job run
-	* :py:meth:`trigger_job_run` - triggers an execution of a job definition
+	* :py:meth:`get_job_run` - returns details of a single job run
+	* :py:meth:`trigger_job_run` - triggers an execution of a job definition, returns details of that job run
 	"""
 
 	def __init__(self, account_id, api_token):
@@ -55,9 +55,8 @@ class Sinter(object):
 		raise NotImplementedError
 		# return self._get('/accounts/%s/projects/%s/definitions/%s/runs/' % (self.account_id, project_id, job_id))
 
-	def get_job_run(self, project_id, job_id, job_run_id):
-		raise NotImplementedError
-		# return self._get('/accounts/%s/projects/%s/definitions/%s/runs/%s/' % (self.account_id, project_id, job_id, job_run_id))
+	def get_job_run(self, project_id, job_run_id):
+		return self._get('/accounts/%s/projects/%s/runs/%s/' % (self.account_id, project_id, job_run_id))
 
 	def trigger_job_run(self, project_id, job_id):
 		return self._post('/accounts/%s/projects/%s/definitions/%s/runs/' % (self.account_id, project_id, job_id))

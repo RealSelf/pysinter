@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
 	name="pysinter",
-	version="1.0.5",
+	version="1.1.0",
 	description="Python 3 wrapper for the Sinter API",
 	url="https://github.com/RealSelf/pysinter",
 	author="Michael Dunn",
